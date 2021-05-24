@@ -38,12 +38,16 @@ class _MainFragmentState extends State<MainFragment> {
       _categoryItem(
         name: "Public Utilities",
         iconData: Icons.ac_unit,
-        onTap: () {},
+        onTap: () {
+          NavigatorUtil.goPublicUtilities(context);
+        },
       ),
       _categoryItem(
         name: "Bill Payment",
         iconData: Icons.ac_unit,
-        onTap: () {},
+        onTap: () {
+          NavigatorUtil.goBllPaymentPage(context);
+        },
       ),
       _categoryItem(
         name: "Tickets",
@@ -53,12 +57,16 @@ class _MainFragmentState extends State<MainFragment> {
       _categoryItem(
         name: "Coupons",
         iconData: Icons.ac_unit,
-        onTap: () {},
+        onTap: () {
+          NavigatorUtil.goCoupons(context);
+        },
       ),
       _categoryItem(
         name: "Loyalty Points",
         iconData: Icons.ac_unit,
-        onTap: () {},
+        onTap: () {
+          NavigatorUtil.goLoyaltyPage(context);
+        },
       ),
     ];
     return Scaffold(

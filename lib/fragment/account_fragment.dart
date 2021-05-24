@@ -72,7 +72,11 @@ class _AccountFragmentState extends State<AccountFragment> {
                   ),
                   Positioned(
                     right: 10,
-                    child: Icon(Icons.edit),
+                    child: InkWell(
+                        onTap: () {
+                          NavigatorUtil.goProfileEditPage(context);
+                        },
+                        child: Icon(Icons.edit)),
                   )
                 ],
               )),

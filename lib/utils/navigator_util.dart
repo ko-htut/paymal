@@ -32,7 +32,16 @@ class NavigatorUtil {
       Routes.register,
     );
   }
-    /// Register Page
+
+  /// Register Page
+  static void goProfileEditPage(BuildContext context) {
+    _navigateTo(
+      context,
+      Routes.profileeditpage,
+    );
+  }
+
+    /// OTP Page
   static void goOTPPage(BuildContext context) {
     _navigateTo(
       context,
@@ -80,6 +89,24 @@ class NavigatorUtil {
   /// Ticket Page
   static void goTicketPage(BuildContext context) {
     _navigateTo(context, Routes.ticketpage);
+  }
+  /// Public Utilities Page
+  static void goPublicUtilities(BuildContext context) {
+    _navigateTo(context, Routes.publicutilitiespage);
+  }
+
+  /// Coupons  Page
+  static void goCoupons(BuildContext context) {
+    _navigateTo(context, Routes.couponspage);
+  }
+  /// Bill Payment Page
+  static void goBllPaymentPage(BuildContext context) {
+    _navigateTo(context, Routes.billpaymentpage);
+  }
+
+   /// Loyalty Points Page
+  static void goLoyaltyPage(BuildContext context) {
+    _navigateTo(context, Routes.loyaltyPage);
   }
 
   /// Privacy Policy Page

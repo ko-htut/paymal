@@ -1,12 +1,17 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:paymal/page/bill_payment_page.dart';
+import 'package:paymal/page/coupons_page.dart';
 import 'package:paymal/page/data_package_page.dart';
 import 'package:paymal/page/giftcard_details_page.dart';
 import 'package:paymal/page/giftcard_page.dart';
 import 'package:paymal/page/home_page.dart';
 import 'package:paymal/page/login_page.dart';
+import 'package:paymal/page/loyalty_points_page.dart';
 import 'package:paymal/page/otp_page.dart';
 import 'package:paymal/page/privacy_policy_page.dart';
+import 'package:paymal/page/profile_edit_page.dart';
+import 'package:paymal/page/public_utilities_pages.dart';
 import 'package:paymal/page/register_page.dart';
 import 'package:paymal/page/ticket_page.dart';
 import 'package:paymal/page/topup_page.dart';
@@ -31,6 +36,11 @@ Handler homeHanderl = Handler(
   return HomePage();
 });
 
+Handler profileeditHanderl = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return ProfileEditPage();
+});
+
 Handler topUpHanderl = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return TopUpPage();
@@ -49,6 +59,26 @@ Handler giftcardHanderl = Handler(
 Handler ticketHanderl = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return TicketPage();
+});
+
+Handler publicutilitiesHanderl = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return PublicUtilitiesPage();
+});
+
+Handler billpaymentHanderl = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return BillPaymentPage();
+});
+
+Handler couponsHanderl = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return CouponsPage();
+});
+
+Handler loyaltyHanderl = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return Loyanty();
 });
 
 Handler giftcarddetailsHanderl = Handler(
