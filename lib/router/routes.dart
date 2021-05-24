@@ -2,7 +2,6 @@ import 'package:fluro/fluro.dart' as f;
 import 'package:flutter/material.dart';
 import 'package:paymal/router/router_handler.dart';
 
-
 class Routes {
   static String root = '/';
   static String home = '/home';
@@ -17,6 +16,7 @@ class Routes {
   static String giftcarddetailspage = '/giftcarddetailspage';
   static String ticketpage = '/ticketpage';
   static String billpaymentpage = '/billpaymentpage';
+  static String privacypolicypage = '/privacypolicypage';
 
   static void configureRoutes(f.FluroRouter router) {
     router.notFoundHandler = new f.Handler(
@@ -27,11 +27,12 @@ class Routes {
     router.define(home, handler: homeHanderl);
     router.define(login, handler: loginHanderl);
     router.define(register, handler: registerHanderl);
+    router.define(otp, handler: otpHanderl);
     router.define(topuppage, handler: topUpHanderl);
     router.define(datapackpage, handler: datapackHanderl);
     router.define(giftcardpage, handler: giftcardHanderl);
     router.define(giftcarddetailspage, handler: giftcarddetailsHanderl);
     router.define(ticketpage, handler: ticketHanderl);
-    
+    router.define(privacypolicypage, handler: privacypolicyHandler);
   }
 }

@@ -158,19 +158,24 @@ class _AccountFragmentState extends State<AccountFragment> {
                       style: TextStyle(color: Colors.green),
                     ),
                   ),
-                  ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.green[50],
-                      child: ClipOval(
-                        child: Icon(
-                          Icons.info_outline,
-                          color: Colors.green,
+                  InkWell(
+                    onTap: () {
+                      NavigatorUtil.goPrivacyPolicy(context);
+                    },
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.green[50],
+                        child: ClipOval(
+                          child: Icon(
+                            Icons.info_outline,
+                            color: Colors.green,
+                          ),
                         ),
                       ),
-                    ),
-                    title: Text(
-                      "Privacy & Security",
-                      style: TextStyle(color: Colors.green),
+                      title: Text(
+                        "Privacy & Security",
+                        style: TextStyle(color: Colors.green),
+                      ),
                     ),
                   ),
                   Divider(),

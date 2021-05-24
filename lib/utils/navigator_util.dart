@@ -32,6 +32,13 @@ class NavigatorUtil {
       Routes.register,
     );
   }
+    /// Register Page
+  static void goOTPPage(BuildContext context) {
+    _navigateTo(
+      context,
+      Routes.otp,
+    );
+  }
 
   /// Home Page
   static void goHomePage(BuildContext context) {
@@ -73,5 +80,10 @@ class NavigatorUtil {
   /// Ticket Page
   static void goTicketPage(BuildContext context) {
     _navigateTo(context, Routes.ticketpage);
+  }
+
+  /// Privacy Policy Page
+  static void goPrivacyPolicy(BuildContext context) {
+    _navigateTo(context, Routes.privacypolicypage);
   }
 }

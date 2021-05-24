@@ -5,6 +5,8 @@ import 'package:paymal/page/giftcard_details_page.dart';
 import 'package:paymal/page/giftcard_page.dart';
 import 'package:paymal/page/home_page.dart';
 import 'package:paymal/page/login_page.dart';
+import 'package:paymal/page/otp_page.dart';
+import 'package:paymal/page/privacy_policy_page.dart';
 import 'package:paymal/page/register_page.dart';
 import 'package:paymal/page/ticket_page.dart';
 import 'package:paymal/page/topup_page.dart';
@@ -17,6 +19,11 @@ Handler loginHanderl = Handler(
 Handler registerHanderl = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return RegisterPage();
+});
+
+Handler otpHanderl = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return OTPPage();
 });
 
 Handler homeHanderl = Handler(
@@ -64,4 +71,9 @@ Handler giftcarddetailsHanderl = Handler(
     ],
     cardimage: 'assets/image/Slice.png',
   );
+});
+
+Handler privacypolicyHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return PrivacyPolicyPage();
 });

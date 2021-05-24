@@ -37,13 +37,19 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
             top: ScreenUtil().setWidth(80),
             right: ScreenUtil().setWidth(50),
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Text(
-                "Register",
-                style: Theme.of(context).textTheme.button,
+          InkWell(
+            onTap: () {
+              //
+              NavigatorUtil.goRegisterPage(context);
+            },
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  "Register",
+                  style: Theme.of(context).textTheme.button,
+                ),
               ),
             ),
           ),
@@ -140,7 +146,7 @@ class __LoginWidgetState extends State<_LoginWidget> {
                 padding: EdgeInsets.all(1.0),
                 color: const Color(0xff4285F4),
                 onPressed: () async {
-                    NavigatorUtil.goHomePage(context);
+                  NavigatorUtil.goHomePage(context);
                 },
                 child: new Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -174,7 +180,7 @@ class __LoginWidgetState extends State<_LoginWidget> {
                 padding: EdgeInsets.all(1.0),
                 color: Colors.white,
                 onPressed: () async {
-                    NavigatorUtil.goHomePage(context);
+                  NavigatorUtil.goHomePage(context);
                 },
                 child: new Row(
                   crossAxisAlignment: CrossAxisAlignment.center,

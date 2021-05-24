@@ -11,7 +11,16 @@ class _TopUpPageState extends State<TopUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
+      appBar: AppBar(
+        title: Text("Top Up"),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            //
+          ],
+        ),
+      ),
     );
   }
 }
