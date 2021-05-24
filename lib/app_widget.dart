@@ -66,7 +66,7 @@ class _AppWidgetState extends State<AppWidget> {
         },
         navigatorKey: Application.getIt<NavigateService>().key,
         debugShowCheckedModeBanner: false,
-        title: 'Paymal',
+        title: 'PAYMAL',
         home: SplashPage(),
         onGenerateRoute: Application.router.generator,
       ),
