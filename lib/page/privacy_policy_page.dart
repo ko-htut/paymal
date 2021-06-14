@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:paymal/widget/h_empty_view.dart';
 import 'package:paymal/widget/v_empty_view.dart';
 
+import '../language_constants.dart';
+
 class PrivacyPolicyPage extends StatefulWidget {
   PrivacyPolicyPage({Key key}) : super(key: key);
 
@@ -14,7 +16,8 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Privacy Policy"),
+          backgroundColor: Colors.blueAccent,
+        title: Text(getTranslated(context, 'privacypolicy')),
       ),
       body: SingleChildScrollView(
         child: Column(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../language_constants.dart';
+
 class HistoryFragment extends StatefulWidget {
   HistoryFragment({Key key}) : super(key: key);
 
@@ -11,6 +13,7 @@ class _HistoryFragmentState extends State<HistoryFragment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text(getTranslated(context, 'history')),  centerTitle: true,),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(

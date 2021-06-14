@@ -20,6 +20,7 @@ class _OTPPageState extends State<OTPPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          backgroundColor: Colors.blueAccent,
         elevation: 0,
         title: Text(getTranslated(context, 'otp')),
       ),
@@ -38,7 +39,7 @@ class _OTPPageState extends State<OTPPage> {
                 //
                 VEmptyView(30),
                 Text(
-                  "OTP Code Confimation",
+                  getTranslated(context, 'otp_code_comfirm'),
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 VEmptyView(30),
@@ -46,20 +47,20 @@ class _OTPPageState extends State<OTPPage> {
                   textInputAction: TextInputAction.next,
                   controller: _otpController,
                   keyboardType: TextInputType.number,
-                  decoration: _getInputDec("OTP Code", Icon(AntIcons.number)),
+                  decoration: _getInputDec(getTranslated(context, 'otp_code'), Icon(AntIcons.number)),
                 ),
                 VEmptyView(20),
                 RaisedButton(
-                  color: Colors.lightBlue,
+                  color: Colors.blueAccent,
                   onPressed: () {
-                    NavigatorUtil.goHomePage(context);
+                    NavigatorUtil.goCreatePinCodePage(context);
                   },
                   child: Container(
                     width: double.infinity,
                     height: ScreenUtil().setHeight(80),
-                    child: Center(child: Text("Confirm")),
+                    child: Center(child: Text(getTranslated(context, 'comfirm'),style: TextStyle(color: Colors.white),),
                   ),
-                ),
+                ),)
               ],
             ),
           ),

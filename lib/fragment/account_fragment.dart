@@ -1,10 +1,13 @@
+import 'package:ant_icons/ant_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/screen_util.dart';
 import 'package:paymal/app_widget.dart';
 import 'package:paymal/language.dart';
 import 'package:paymal/language_constants.dart';
 import 'package:paymal/utils/navigator_util.dart';
 import 'package:paymal/widget/h_empty_view.dart';
 import 'package:paymal/widget/v_empty_view.dart';
+import '../pay_mal_icons.dart';
 
 class AccountFragment extends StatefulWidget {
   AccountFragment({Key key}) : super(key: key);
@@ -17,6 +20,10 @@ class _AccountFragmentState extends State<AccountFragment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(getTranslated(context, 'account')),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
@@ -24,6 +31,7 @@ class _AccountFragmentState extends State<AccountFragment> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              VEmptyView(20),
               Container(
                   child: Stack(
                 children: [
@@ -71,12 +79,15 @@ class _AccountFragmentState extends State<AccountFragment> {
                     ),
                   ),
                   Positioned(
-                    right: 10,
+                    right: ScreenUtil().setWidth(255),
                     child: InkWell(
                         onTap: () {
                           NavigatorUtil.goProfileEditPage(context);
                         },
-                        child: Icon(Icons.edit)),
+                        child: CircleAvatar(
+                            radius: 15,
+                            backgroundColor: Colors.blue[100],
+                            child: Icon(Icons.edit))),
                   )
                 ],
               )),
@@ -136,13 +147,20 @@ class _AccountFragmentState extends State<AccountFragment> {
                           .toList(),
                     ),
                   ),
-                  ListTile(
-                    leading: Icon(Icons.pin),
-                    title: Text(getTranslated(context, 'change_pin')),
+                  InkWell(
+                    onTap: () {
+                      NavigatorUtil.goChangePinCodePage(context);
+                    },
+                    child: ListTile(
+                      leading: Icon(
+                        PayMal.password,
+                      ),
+                      title: Text(getTranslated(context, 'change_passcode')),
+                    ),
                   ),
                   ListTile(
                     leading: Icon(
-                      Icons.design_services_outlined,
+                      AntIcons.ant_design,
                     ),
                     title: Text(getTranslated(context, 'change_theme')),
                   ),
@@ -152,13 +170,43 @@ class _AccountFragmentState extends State<AccountFragment> {
                       backgroundColor: Colors.green[50],
                       child: ClipOval(
                         child: Icon(
-                          Icons.info_outline,
+                          AntIcons.info_circle_outline,
                           color: Colors.green,
                         ),
                       ),
                     ),
                     title: Text(
                       getTranslated(context, 'about'),
+                      style: TextStyle(color: Colors.green),
+                    ),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.green[50],
+                      child: ClipOval(
+                        child: Icon(
+                          AntIcons.info_circle_outline,
+                          color: Colors.green,
+                        ),
+                      ),
+                    ),
+                    title: Text(
+                      "FAQ",
+                      style: TextStyle(color: Colors.green),
+                    ),
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.green[50],
+                      child: ClipOval(
+                        child: Icon(
+                          AntIcons.contacts_outline,
+                          color: Colors.green,
+                        ),
+                      ),
+                    ),
+                    title: Text(
+                      "Contact Us",
                       style: TextStyle(color: Colors.green),
                     ),
                   ),
@@ -207,7 +255,7 @@ class _AccountFragmentState extends State<AccountFragment> {
               ),
               VEmptyView(10),
               Center(
-                child: Text("Version v0.0.1"),
+                child: Text("Version v0.0.3T"),
               ),
             ],
           ),

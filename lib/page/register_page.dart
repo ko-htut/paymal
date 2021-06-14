@@ -23,7 +23,8 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Register"),
+        backgroundColor: Colors.blueAccent,
+        title: Text(getTranslated(context, 'register')),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -77,7 +78,7 @@ class _RegisterPageState extends State<RegisterPage> {
               VEmptyView(25),
               // ignore: deprecated_member_use
               RaisedButton(
-                color: Colors.lightBlue,
+                color: Colors.blueAccent,
                 onPressed: () {
                   NavigatorUtil.goOTPPage(context);
                 },
@@ -87,6 +88,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   child: Center(
                     child: Text(
                       getTranslated(context, 'next'),
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),

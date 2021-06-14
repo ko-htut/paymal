@@ -1,7 +1,4 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:paymal/router/application.dart';
 import 'package:paymal/utils/navigator_util.dart';
 
@@ -22,21 +19,19 @@ class _SplashPageState extends State<SplashPage> {
   void goPage() async {
     Application.initSp();
     Future.delayed(Duration(seconds: 3))
-        .then((value) => NavigatorUtil.goLoginPage(context));
+        .then((value) => NavigatorUtil.goAdSplashPage(context));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Center(
-            child: Text("This is Splash"),
-          ),
-          Text("၃ စက္ကန့်စောင့်ပါ")
+          Center(child: Image.asset("assets/logo/sp logo.png")),
         ],
       ),
     );

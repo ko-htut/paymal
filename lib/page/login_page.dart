@@ -4,6 +4,8 @@ import 'package:paymal/utils/navigator_util.dart';
 import 'package:paymal/widget/common_button.dart';
 import 'package:paymal/widget/v_empty_view.dart';
 
+import '../language_constants.dart';
+
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
 
@@ -32,24 +34,36 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          Positioned(
-            child: Text("Skip"),
-            top: ScreenUtil().setWidth(80),
-            right: ScreenUtil().setWidth(50),
-          ),
-          InkWell(
-            onTap: () {
-              //
-              NavigatorUtil.goRegisterPage(context);
-            },
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Text(
-                  "Register",
-                  style: Theme.of(context).textTheme.button,
-                ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      //
+                      NavigatorUtil.goRegisterPage(context);
+                    },
+                    child: Text(
+                      getTranslated(context, "register"),
+                      style: Theme.of(context).textTheme.button,
+                    ),
+                  ),
+                  Text(" / "),
+                  InkWell(
+                    onTap: () {
+                      //
+                      NavigatorUtil.goForgotPH(context);
+                    },
+                    child: Text("Forgot Password",
+                      style: Theme.of(context).textTheme.button,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -88,7 +102,7 @@ class __LoginWidgetState extends State<_LoginWidget> {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData(primaryColor: Colors.red),
+      data: ThemeData(primaryColor: Colors.blueAccent),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
@@ -109,7 +123,7 @@ class __LoginWidgetState extends State<_LoginWidget> {
             controller: _phoneController,
             keyboardType: TextInputType.phone,
             decoration: InputDecoration(
-                hintText: 'Phone',
+                hintText: getTranslated(context, "ph_no"),
                 prefixIcon: Icon(
                   Icons.phone_iphone,
                   color: Colors.grey,
@@ -120,7 +134,7 @@ class __LoginWidgetState extends State<_LoginWidget> {
             obscureText: true,
             controller: _pwdController,
             decoration: InputDecoration(
-                hintText: 'Password',
+                hintText: getTranslated(context, "password"),
                 prefixIcon: Icon(
                   Icons.lock,
                   color: Colors.grey,
@@ -130,15 +144,15 @@ class __LoginWidgetState extends State<_LoginWidget> {
           Center(
             child: CommonButton(
               callback: () {
-                NavigatorUtil.goHomePage(context);
+                NavigatorUtil.goCreatePinCodePage(context);
               },
-              content: 'Login',
+              content: getTranslated(context, "login"),
               height: ScreenUtil().setHeight(80),
               width: ScreenUtil().setWidth(500),
             ),
           ),
           VEmptyView(50),
-          Center(child: Text("OR")),
+          Center(child: Text(getTranslated(context, "or"))),
           Container(
             width: ScreenUtil().setWidth(500),
             margin: EdgeInsets.fromLTRB(30.0, 5.0, 30.0, 5.0),

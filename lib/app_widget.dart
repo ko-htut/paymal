@@ -44,6 +44,7 @@ class _AppWidgetState extends State<AppWidget> {
     return ScreenUtilInit(
       designSize: Size(750, 1334),
       builder: () => MaterialApp(
+        theme: ThemeData(fontFamily: "pyidaungsu"),
         supportedLocales: [
           Locale("en", "US"),
           Locale("my", "MM"),
@@ -73,3 +74,6 @@ class _AppWidgetState extends State<AppWidget> {
     );
   }
 }
+
+//  flutter pub run flutter_launcher_icons:main
+//  <uses-permission android:name="android.permission.INTERNET" />

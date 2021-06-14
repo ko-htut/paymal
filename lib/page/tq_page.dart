@@ -11,7 +11,7 @@ class _TQPageState extends State<TQPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(title: Text("TQ"),),
+    appBar: AppBar(title: Text("TQ"),  backgroundColor: Colors.blueAccent,),
     );
   }
 }

@@ -28,17 +28,24 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  cupertino_icons:
   fluro:
   get_it:
   shared_preferences:
   flutter_screenutil:
+  flutter_launcher_icons:
   ant_icons:
+  marquee_widget:
+  pinput: 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo/logo.png"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -53,6 +60,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/image/
+    - assets/logo/
+    - assets/Mb/
+    - assets/payment/
     - lib/language/en.json
     - lib/language/my.json
     - assets/nrc.json
@@ -73,6 +83,10 @@ flutter:
     - family: pyidaungsu
       fonts:
         - asset: assets/fonts/pyidaungsu.ttf
+
+    - family:  PayMal
+      fonts:
+        - asset: assets/icon/PayMal.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

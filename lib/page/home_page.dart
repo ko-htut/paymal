@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/screen_util.dart';
 import 'package:paymal/fragment/account_fragment.dart';
 import 'package:paymal/fragment/history_fragment.dart';
 import 'package:paymal/fragment/main_fragment.dart';
 import 'package:paymal/fragment/notification_fragment.dart';
 import 'package:paymal/language_constants.dart';
+
+import '../pay_mal_icons.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -31,33 +34,27 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        title: Text(
-          'Paymal',
-          style: TextStyle(color: Colors.black),
-        ),
-      ),
+      backgroundColor: Colors.blueAccent,
+     
       body: _page[_cIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _cIndex,
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(PayMal.home),
             label: getTranslated(context, 'home'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.history),
+            icon: Icon(PayMal.history),
             label: getTranslated(context, 'history'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
+            icon: Icon(PayMal.bell),
             label: getTranslated(context, 'notification'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined),
+            icon: Icon(PayMal.user_account),
             label: getTranslated(context, 'account'),
           ),
         ],

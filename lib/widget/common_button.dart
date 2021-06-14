@@ -23,7 +23,7 @@ class CommonButton extends StatelessWidget {
       // ignore: deprecated_member_use
       child: RaisedButton(
         onPressed: callback,
-        color: Colors.red,
+        color: Colors.blueAccent,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(height / 2))),
         child: Text(

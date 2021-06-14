@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import '../language_constants.dart';
+
 class NotificationFragment extends StatefulWidget {
   NotificationFragment({Key key}) : super(key: key);
 
@@ -13,6 +15,12 @@ class _NotificationFragmentState extends State<NotificationFragment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          getTranslated(context, 'notification'),
+        ),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(

@@ -8,12 +8,29 @@ class TravelPage extends StatefulWidget {
 }
 
 class _TravelPageState extends State<TravelPage> {
+  List<String> _travel = [
+    "Air KBZ(Agent)",
+    "Air KBZ(Bank Sale)",
+    "BNF Express",
+    "British Chamber",
+    "Elite Express",
+    "Flymya.com",
+    "jj Express",
+    "LODGGY",
+    "MM Bus Ticket",
+    "Myanmar ETC",
+    "NguWar Bus TIcket"
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Travel"),
+      appBar: AppBar(
+          backgroundColor: Colors.blueAccent,
+        title: Text("Travel"),
       ),
-      body: Column(children: [],),
+      body: Column(
+        children: [],
+      ),
     );
   }
 }

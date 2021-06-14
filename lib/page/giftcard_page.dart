@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:paymal/language_constants.dart';
 import 'package:paymal/utils/navigator_util.dart';
 
 class GiftCardPage extends StatefulWidget {
@@ -14,7 +15,8 @@ class _GiftCardPageState extends State<GiftCardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Gift Card"),
+          backgroundColor: Colors.blueAccent,
+        title: Text(getTranslated(context, "gift_card")),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -23,6 +25,58 @@ class _GiftCardPageState extends State<GiftCardPage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+               Text(
+                "Best Selling",
+                style: Theme.of(context).textTheme.headline6,
+              ),
+              Container(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  myCard(
+                    click: () {
+                      NavigatorUtil.goGiftCardDetailsPage(
+                        context,
+                        name: 'Apple',
+                        list: [
+                          "5 USD",
+                          "10 USD",
+                          "15 USD",
+                          "20 USD",
+                          "25 USD",
+                          "30 USD",
+                          "50 USD",
+                          "100 USD",
+                        ],
+                        image: 'assets/image/Slice.png',
+                      );
+                    },
+                    image: "assets/image/Slice.png",
+                  ),
+                 myCard(
+                    click: () {
+                      NavigatorUtil.goGiftCardDetailsPage(
+                        context,
+                        name: 'Steam Wallet',
+                        list: [
+                          "USD 5.4",
+                          "USD 10.8",
+                          "USD 13.5",
+                          "USD 27",
+                          "USD 53.5",
+                          "USD 107",
+                        ],
+                        image: 'assets/image/Steam Wallet.png',
+                      );
+                    },
+                    image: "assets/image/Steam Wallet.png",
+                  ),
+                ],
+              ),
+              Container(
+                height: 10,
+              ),
               Text(
                 "Entertainment",
                 style: Theme.of(context).textTheme.headline6,
@@ -46,10 +100,6 @@ class _GiftCardPageState extends State<GiftCardPage> {
                           "30 USD",
                           "50 USD",
                           "100 USD",
-                          "200 USD",
-                          "300 USD",
-                          "400 USD",
-                          "500 USD",
                         ],
                         image: 'assets/image/Slice.png',
                       );
@@ -182,7 +232,7 @@ class _GiftCardPageState extends State<GiftCardPage> {
                     click: () {
                       NavigatorUtil.goGiftCardDetailsPage(
                         context,
-                        name: 'Karma Koin',
+                        name: 'Minecraft',
                         list: [
                           "1720 Minecoins",
                           "3500 Minecoins",
@@ -259,10 +309,10 @@ class _GiftCardPageState extends State<GiftCardPage> {
                           "USD 75",
                           "USD 100",
                         ],
-                        image: 'assets/image/PlayStation Network.png',
+                        image: 'assets/image/Nintendo eShop.png',
                       );
                     },
-                    image: "assets/image/PlayStation Network.png",
+                    image: "assets/image/Nintendo eShop.png",
                   ),
                   myCard(
                     click: () {
@@ -298,10 +348,10 @@ class _GiftCardPageState extends State<GiftCardPage> {
                           "3000 + 850 UC",
                           "8100 UC",
                         ],
-                        image: 'assets/image/Razer Gold.png',
+                        image: 'assets/image/PUBG.png',
                       );
                     },
-                    image: "assets/image/Razer Gold.png",
+                    image: "assets/image/PUBG.png",
                   ),
                   myCard(
                     click: () {
@@ -411,7 +461,7 @@ class _GiftCardPageState extends State<GiftCardPage> {
                 ],
               ),
               Text(
-                "Entertainment",
+                "Communication",
                 style: Theme.of(context).textTheme.headline6,
               ),
               Container(

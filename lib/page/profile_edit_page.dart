@@ -22,6 +22,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          backgroundColor: Colors.blueAccent,
         title: Text("Edit"),
       ),
       body: SingleChildScrollView(
@@ -101,7 +102,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   child: Container(
                     width: double.infinity,
                     height: ScreenUtil().setHeight(80),
-                    child: Center(child: Text("Confirm")),
+                    child: Center(child: Text(getTranslated(context, "comfirm"))),
                   ),
                 ),
               ],
