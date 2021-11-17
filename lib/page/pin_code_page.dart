@@ -10,6 +10,7 @@ class PinCodePage extends StatefulWidget {
 }
 
 class _PinCodePageState extends State<PinCodePage> {
+  
   final _formKey = GlobalKey<FormState>();
   final _pinPutController = TextEditingController();
   final _pinPutFocusNode = FocusNode();
@@ -57,7 +58,7 @@ class _PinCodePageState extends State<PinCodePage> {
                 right: 0,
                 child: Center(
                     child: Text(
-                  "Please enter passcode",
+                  "Please enter Pin",
                   style: Theme.of(context).textTheme.headline6,
                 ))),
           ],
@@ -157,7 +158,7 @@ class _PinCodePageState extends State<PinCodePage> {
         children: <Widget>[
           TextButton(
             onPressed: () => NavigatorUtil.goLoginPage(context),
-            child: const Text('Forgot Passcode?'),
+            child: const Text('Forgot Pin?'),
           ),
         ],
       ),

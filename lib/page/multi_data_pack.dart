@@ -49,12 +49,6 @@ class _MultiDataPackState extends State<MultiDataPack> {
         children: [
           Row(
             children: [
-               InkWell(
-                   onTap: () {
-                     // _phoneController.clear();
-                    
-                   },
-                   child: Icon(Icons.contact_phone)),
               Expanded(
                 child: TextField(
                   textInputAction: TextInputAction.done,
@@ -379,7 +373,7 @@ class _MultiDataPackState extends State<MultiDataPack> {
                   margin: EdgeInsets.all(5),
                   child: Center(
                       child: Text(
-                    "အနည်းဆုံးဖုန်းနံပါတ်တစ်ခု ဖြည့်သွင်းပေးပါ",
+                   getTranslated(context, "wwwwwww"),
                     textAlign: TextAlign.center,
                   )),
                 ),

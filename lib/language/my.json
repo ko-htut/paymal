@@ -68,13 +68,15 @@
     "profile_update": "ကိုယ်ရေးမှတ်တမ်းပြင်ဆင်မည်",
     "nrc_number": "မှတ်ပုံတင်နံပါတ်",
     "wellcome_to_paymal": "Paymal မှကြိုဆိုပါသည်",
-    "new_passcode": "Passcode အသစ်ရိုက်ထည့်ရန်",
-    "old_passcode": "Passcode အဟောင်းရိုက်ထည့်ရန်",
-    "retype_passcode": "Passcode ပြန်ရိုက်ထည့်ရန်",
-    "change_passcode": "Passcode ချိန်းရန်",
+    "new_passcode": "Pin အသစ်ရိုက်ထည့်ရန်",
+    "old_passcode": "Pin အဟောင်းရိုက်ထည့်ရန်",
+    "retype_passcode": "Pin ပြန်ရိုက်ထည့်ရန်",
+    "change_passcode": "Pin ချိန်းရန်",
     "coming_soon": "မကြာမီ Release  လုပ်မည်",
     "cash_in": "ငွေဖြည့်သွင်းမည်",
     "payment_type": "ငွေပေးချေမှုအမျိုးအစား",
     "amount": "ပမာဏ",
-    "choose_card_type": "ကဒ်အမျိုးအစားရွေးချယ်ပါ"
+    "choose_card_type": "ကဒ်အမျိုးအစားရွေးချယ်ပါ",
+    "continue":"ရှေ့ဆက်ရန်",
+    "wwwwwww":"အနည်းဆုံးဖုန်းနံပါတ်တစ်ခု ဖြည့်သွင်းပေးပါ"
 }

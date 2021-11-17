@@ -64,8 +64,7 @@ class _MutliTopUpPageState extends State<MutliTopUpPage> {
                   textInputAction: TextInputAction.done,
                   controller: _phoneController,
                   keyboardType: TextInputType.text,
-                  decoration:
-                      _getInputDec("Phone number", Icon(PayMal.topup)),
+                  decoration: _getInputDec("Phone number", Icon(PayMal.topup)),
                   onSubmitted: (v) {
                     if (_phoneController.text != "") {
                       if (_radioValue == 1) {
@@ -206,7 +205,7 @@ class _MutliTopUpPageState extends State<MutliTopUpPage> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        "Phone Nunber",
+                                        "Phone Number",
                                         style: TextStyle(
                                           color: Colors.white,
                                         ),
@@ -359,7 +358,7 @@ class _MutliTopUpPageState extends State<MutliTopUpPage> {
                             width: double.infinity,
                             child: Center(
                               child: Text(
-                                getTranslated(context, "purchase_data_packs"),
+                                getTranslated(context, "topup"),
                                 style: TextStyle(color: Colors.white),
                               ),
                             ),
@@ -373,7 +372,7 @@ class _MutliTopUpPageState extends State<MutliTopUpPage> {
                   margin: EdgeInsets.all(5),
                   child: Center(
                       child: Text(
-                    "အနည်းဆုံးဖုန်းနံပါတ်တစ်ခု ဖြည့်သွင်းပေးပါ",
+                    getTranslated(context, "wwwwwww"),
                     textAlign: TextAlign.center,
                   )),
                 ),
@@ -400,8 +399,8 @@ class _MutliTopUpPageState extends State<MutliTopUpPage> {
               ),
             )
           : Padding(
-          padding: const EdgeInsets.only(right:10.0),
-          child: Icon(Icons.contact_phone)),
+              padding: const EdgeInsets.only(right: 10.0),
+              child: Icon(Icons.contact_phone)),
       focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(color: Colors.white, width: 0),
         borderRadius: BorderRadius.all(Radius.circular(8)),

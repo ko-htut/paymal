@@ -151,10 +151,10 @@ class _PublicUtilitiesDetailsState extends State<PublicUtilitiesDetails> {
                                       "273,Sanyar San Road, (33) ward"),
                                   _item("Township", "North Dagon"),
                                   _item("Meter Number", searchText),
-                                  _item("Barcode", searchText2),
-                                  _item("Total Unit", "0.0000"),
+                                  _item("Barcode /CNP No./Ref No.", searchText2),
+                                  _item("Total Units", "100"),
                                   _item("Meter Consuming Amount", "12,000 MMK"),
-                                  _item("Service Charges", "0.0000"),
+                                  _item("Service Charges", "500 MMK"),
                                   Container(
                                     height: 45,
                                     child: Row(
@@ -169,7 +169,7 @@ class _PublicUtilitiesDetailsState extends State<PublicUtilitiesDetails> {
                                             padding: const EdgeInsets.all(8.0),
                                             child: Marquee(
                                                                                           child: Text(
-                                                "Total ",
+                                                "Total Amount",
                                                 textAlign: TextAlign.left,
                                                 style: TextStyle(
                                                     color: Colors.black,
@@ -182,7 +182,7 @@ class _PublicUtilitiesDetailsState extends State<PublicUtilitiesDetails> {
                                         Expanded(
                                           flex: 2,
                                           child: Text(
-                                            "- 12,000 MMK ",
+                                            "- 12,500 MMK ",
                                             style: TextStyle(
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.normal,
@@ -258,7 +258,7 @@ class _PublicUtilitiesDetailsState extends State<PublicUtilitiesDetails> {
                                       width: double.infinity,
                                       child: Center(
                                         child: Text(
-                                          getTranslated(context, "cash_in"),
+                                          getTranslated(context, "continue"),
                                           style: TextStyle(color: Colors.white),
                                         ),
                                       ),

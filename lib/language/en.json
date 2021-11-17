@@ -68,13 +68,16 @@
     "profile_update":"Profile update",
     "nrc_number":"NRC number",
     "wellcome_to_paymal":"Welcome to Paymal",
-    "new_passcode":"New Passcode",
-    "old_passcode":"Old Passcode",
-    "retype_passcode":"Retype Passcode",
-    "change_passcode":"Change Passcode",
+    "new_passcode":"New Pin",
+    "old_passcode":"Old Pin",
+    "retype_passcode":"Retype Pin",
+    "change_passcode":"Change Pin",
     "coming_soon":"Coming Soon",
     "cash_in":"Cash in",
-    "payment_type":"Payment type",
+    "payment_type":"Payment Types",
     "amount":"Amount",
-    "choose_card_type":"Choose card type"
+    "choose_card_type":"Choose card type",
+    "continue":"Continue",
+    "wwwwwww":"We recommend to add at least one mobile phone number."
+
 }
